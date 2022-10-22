@@ -8,6 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyVersion></AssemblyVersion>
     <PackageIcon>SimpleSoundPlayer.png</PackageIcon>
+    <ApplicationIcon>SimpleSoundPlayer_128.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,10 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SimpleSoundPlayer_128.ico" />
   </ItemGroup>
 
   <ItemGroup>

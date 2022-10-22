@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SimpleSoundPlayer));
             this.textBox_FolderPath = new System.Windows.Forms.TextBox();
             this.listView_FileList = new System.Windows.Forms.ListView();
             this.columnHeader_FileName = new System.Windows.Forms.ColumnHeader();
@@ -109,6 +110,7 @@
             this.ClientSize = new System.Drawing.Size(944, 601);
             this.Controls.Add(this.listView_FileList);
             this.Controls.Add(this.textBox_FolderPath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_SimpleSoundPlayer";
             this.Text = "SimpleSoundPlayer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_SimpleSoundPlayer_FormClosing);
