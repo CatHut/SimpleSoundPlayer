@@ -16,10 +16,24 @@ namespace CatHut {
         //ここに設定項目を羅列
         public String Path { set; get; }       //パス
 
+        //フィルタ設定
+        public String Filter1Text { set; get; }
+        public int Filter1Mode { set; get; }
+        public String Filter2Text { set; get; }
+        public int Filter2Mode { set; get; }
+        public String Filter3Text { set; get; }
+        public int Filter3Mode { set; get; }
+
 
         //コンストラクタ（初期値指定を実装）
         public SettingContents() {
             this.Path = "";
+            this.Filter1Text = "";
+            this.Filter1Mode = 0;
+            this.Filter2Text = "";
+            this.Filter2Mode = 0;
+            this.Filter3Text = "";
+            this.Filter3Mode = 0;
         }
 
 

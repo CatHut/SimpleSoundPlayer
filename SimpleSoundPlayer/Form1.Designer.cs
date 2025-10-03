@@ -38,14 +38,19 @@
             columnHeader_FolderPath = new ColumnHeader();
             columnHeader_FullPath = new ColumnHeader();
             groupBox_Filiter = new GroupBox();
+            button_ClearFilter = new Button();
             textBox_Filter3 = new TextBox();
             comboBox_Filter3 = new ComboBox();
             textBox_Filter2 = new TextBox();
             comboBox_Filter2 = new ComboBox();
             textBox_Filter1 = new TextBox();
             comboBox_Filter1 = new ComboBox();
-            button_ClearFilter = new Button();
+            splitContainer1 = new SplitContainer();
             groupBox_Filiter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox_FolderPath
@@ -63,10 +68,11 @@
             // 
             listView_FileList.AllowDrop = true;
             listView_FileList.Columns.AddRange(new ColumnHeader[] { columnHeader_FileName, columnHeader_No, columnHeader_Length, columnHeader_Ext, columnHeader_FolderPath, columnHeader_FullPath });
-            listView_FileList.Location = new Point(12, 229);
+            listView_FileList.Dock = DockStyle.Fill;
+            listView_FileList.Location = new Point(0, 0);
             listView_FileList.MultiSelect = false;
             listView_FileList.Name = "listView_FileList";
-            listView_FileList.Size = new Size(920, 468);
+            listView_FileList.Size = new Size(952, 639);
             listView_FileList.TabIndex = 2;
             listView_FileList.UseCompatibleStateImageBehavior = false;
             listView_FileList.View = View.Details;
@@ -121,6 +127,16 @@
             groupBox_Filiter.TabIndex = 3;
             groupBox_Filiter.TabStop = false;
             groupBox_Filiter.Text = "Filter";
+            // 
+            // button_ClearFilter
+            // 
+            button_ClearFilter.Location = new Point(6, 108);
+            button_ClearFilter.Name = "button_ClearFilter";
+            button_ClearFilter.Size = new Size(75, 23);
+            button_ClearFilter.TabIndex = 6;
+            button_ClearFilter.Text = "クリア";
+            button_ClearFilter.UseVisualStyleBackColor = true;
+            button_ClearFilter.Click += button_ClearFilter_Click;
             // 
             // textBox_Filter3
             // 
@@ -179,24 +195,32 @@
             comboBox_Filter1.TabIndex = 0;
             comboBox_Filter1.SelectedIndexChanged += comboBox_Filter1_SelectedIndexChanged;
             // 
-            // button_ClearFilter
+            // splitContainer1
             // 
-            button_ClearFilter.Location = new Point(6, 108);
-            button_ClearFilter.Name = "button_ClearFilter";
-            button_ClearFilter.Size = new Size(75, 23);
-            button_ClearFilter.TabIndex = 6;
-            button_ClearFilter.Text = "クリア";
-            button_ClearFilter.UseVisualStyleBackColor = true;
-            button_ClearFilter.Click += button_ClearFilter_Click;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
+            splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Name = "splitContainer1";
+            splitContainer1.Orientation = Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(groupBox_Filiter);
+            splitContainer1.Panel1.Controls.Add(textBox_FolderPath);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(listView_FileList);
+            splitContainer1.Size = new Size(952, 833);
+            splitContainer1.SplitterDistance = 190;
+            splitContainer1.TabIndex = 4;
             // 
             // Form_SimpleSoundPlayer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 709);
-            Controls.Add(groupBox_Filiter);
-            Controls.Add(listView_FileList);
-            Controls.Add(textBox_FolderPath);
+            ClientSize = new Size(952, 833);
+            Controls.Add(splitContainer1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form_SimpleSoundPlayer";
             Text = "SimpleSoundPlayer";
@@ -205,8 +229,12 @@
             Resize += Form_SimpleSoundPlayer_Resize;
             groupBox_Filiter.ResumeLayout(false);
             groupBox_Filiter.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
@@ -228,5 +256,6 @@
         private TextBox textBox_Filter2;
         private ComboBox comboBox_Filter2;
         private Button button_ClearFilter;
+        private SplitContainer splitContainer1;
     }
 }
