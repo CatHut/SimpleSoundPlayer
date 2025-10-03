@@ -11,7 +11,7 @@ namespace SimpleSoundPlayer
 
         enum COLUMNS
         {
-            FILE_NAME =0,
+            FILE_NAME = 0,
             NO,
             Length,
             EXT,
@@ -98,7 +98,7 @@ namespace SimpleSoundPlayer
         {
             var selected = this.listView_FileList.SelectedItems;
 
-            if(selected.Count < 1)
+            if (selected.Count < 1)
             {
                 return;
             }
@@ -199,6 +199,41 @@ namespace SimpleSoundPlayer
         {
             m_AppSetting.Settings.Path = textBox_FolderPath.Text;
             m_AppSetting.Exit();
+        }
+
+        private void comboBox_Filter1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_Filter2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_Filter3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Filter1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Filter2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Filter3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_ClearFilter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
